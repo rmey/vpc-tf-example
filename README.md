@@ -68,7 +68,7 @@ The following articles were really helpful in achieving my goals:
 - [Example with Terraform null_resource in IBM Cloud Patterns](https://ibm.github.io/cloud-enterprise-examples/iac-conf-mgmt/ansible/)
 - [Terraform for_each docs](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
 - [Terraform remote-exec with arguments to script](https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec#script-arguments)
-- IBM Cloud Terraform Provider documentation
+- [IBM Cloud Terraform Provider documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs)
 - ChatGPT for some code snippets
 
 
