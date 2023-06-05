@@ -6,7 +6,7 @@ The following project could be used as starting point to create a bunch of resou
     - IAM Group Policies
     - VPCs, Subnets, ACL, Security Groups, Floating IPs
     - VSIs
-    - Service instances
+    - Service instances (COS, Cloud Logging)
 - Terraform remote file provisioning and remote-exec of script including null_resource and argument passing with Terraform (this could be handled much better with Ansible), to install needed software packages for workshop and add users to the VSI instances (example [script.sh](./script.sh))
 
 The concrete example creates for each use a separate Resource Group, VPC, Logging Instance and Ubuntu VSI. On each Ubuntu VSI Terraform executes a script with the username and Linux password hash, which will be created in the machine. This is only an example on how to use parameters in remote-exec of Terraform. In my case the workshop attendees I create the envioronments for could not use private keys for SSH logins. The Linux password hashes could be created with:
