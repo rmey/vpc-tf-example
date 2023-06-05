@@ -7,6 +7,7 @@ variable "resource_groups" {
     vpc_zone   = string
     user_group = string
     logname    = string
+    cosname    = string
     vsi_name   = string
     namespace  = string
     pub_sshkey = string
@@ -44,6 +45,17 @@ resource "ibm_resource_instance" "log" {
   plan              = "7-day"
   location          = var.region
 }
+
+# COS Instances
+resource "ibm_resource_instance" "cos_instance" {
+  for_each          = var.resource_groups
+  name              = each.value.cosname
+  resource_group_id = ibm_resource_group.rg[each.key].id
+  service           = "cloud-object-storage"
+  plan              = "standard"
+  location          = "global"
+}
+
 # VPC
 resource "ibm_is_vpc" "vpc" {
   for_each                    = var.resource_groups
